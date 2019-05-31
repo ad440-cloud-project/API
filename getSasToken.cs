@@ -87,7 +87,7 @@ namespace Functions
 
                         //Retrieve the SAS Uri/Token for the images container, put it into a JSON Object, and return the object.
                         string[] result = GetContainerSasUri(cloudBlobContainer);
-                        var obj = new {uri = result[0], token = result[1], message = "SAS Token good for 60 minutes. Token has Read/Write Privileges. File name should be appended between URI and SAS Token on upload." };
+                        var obj = new {uri = result[0], token = result[1], message = "Pipeline test."/*"SAS Token good for 60 minutes. Token has Read/Write Privileges. File name should be appended between URI and SAS Token on upload."*/ };
                         var jsonToReturn = JsonConvert.SerializeObject(obj, Formatting.Indented);
                         return (ActionResult)new OkObjectResult(jsonToReturn);
 
